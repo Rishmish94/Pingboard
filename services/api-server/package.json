@@ -1,0 +1,12 @@
+{
+    "name": "pingboard-api-server",
+    "version": "1.0.0",
+    "description": "PingBoard API Server",
+    "main": "src/index.js",
+    "scripts": {
+      "start": "node src/index.js"
+    },
+    "dependencies": {
+      "fastify": "^4.28.0"
+    }
+  }
