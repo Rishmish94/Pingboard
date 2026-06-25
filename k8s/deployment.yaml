@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pingboard-api
+  labels:
+    app: pingboard-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pingboard-api
+  template:
+    metadata:
+      labels:
+        app: pingboard-api
+    spec:
+      containers:
+        - name: pingboard-api
+          image: ghcr.io/rishmish94/pingboard-api:v1
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "100m"
+            limits:
+              memory: "128Mi"
+              cpu: "200m"
